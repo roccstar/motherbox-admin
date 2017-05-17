@@ -1,0 +1,15 @@
+{
+    "name": "motherbox-admin",
+    "version": "0.0.1",
+    "author": "Rocco Augusto",
+    "homepage": "https://roccstar.com",
+    "dependencies": {
+
+    },
+    "devDependencies": {
+        
+    },
+    "scripts": {
+        "server": "sudo http-server -c 0 --cors -g"
+    }
+}

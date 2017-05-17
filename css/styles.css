@@ -1,0 +1,90 @@
+/**
+ * Transition animations
+ */
+* {
+    transition: opacity 0.248s ease-in-out;
+}
+*:not(:defined) {
+    opacity: 0;
+}
+
+*:defined {
+    opacity: 1;
+}
+
+/**
+ * Global defaults
+ */
+
+ :root {
+     --debug: 1px solid red;
+     --reset: 0;
+     --reset-block: block;
+     --font-size: 16px;
+     --line-height: 1.42;
+ }
+
+ /** DEBUG
+ mb-app::shadow *, mb-app::shadow *::shadow * {
+     outline: var(--debug);
+ }**/
+
+html, body {
+    min-width: 320px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+body, ul, li, div, section, textarea {
+    margin: var(--reset);
+    padding: var(--reset);
+}
+body {
+    font-size: var(--font-size);
+    font-family: 'Nunito', sans-serif;
+    line-height: var(--line-height);
+    background: #eee;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active, a:focus {
+    outline: none;
+}
+
+.content {
+    padding: 10px;
+}
+
+@media (max-width: 380px) {
+    body {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    body, html {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    ::-webkit-scrollbar {
+        width: 2px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #292929;
+        border-radius: 10px;
+    }
+}
