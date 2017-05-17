@@ -51,8 +51,7 @@ class MbIcon extends HTMLElement {
             ? this.size
             : '18'}`;
 
-        this.shadow.innerHTML = this.src
-            ? `
+        this.shadow.innerHTML = this.src ? `
             <style type="text/css">
                 :host span {
                     display: inline-block;
@@ -66,8 +65,7 @@ class MbIcon extends HTMLElement {
             </style>
             <span class="mb-icon">
                 <img src="${this.src}" width="${size}" height="${size}" alt=""  />
-            </span>
-        `
+            </span> `
             : `<content></content>`;
     }
 }

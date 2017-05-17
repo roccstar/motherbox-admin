@@ -71,9 +71,7 @@ class MbCard extends HTMLElement {
                 }
             </style>
             <div class="mb-card">
-                ${this.title
-            ? `<div class="title">${this.title}</div>`
-            : ''}
+                ${this.title ? `<div class="title">${this.title}</div>` : ''}
                 <content></content>
             </div>
         `;

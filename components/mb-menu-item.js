@@ -64,12 +64,8 @@ class MbMenuItem extends HTMLElement {
     }
 
     render() {
-        const active = window.location.hash === this.href
-            ? true
-            : false;
-        const classes = active
-            ? 'mb-menu-item active'
-            : 'mb-menu-item';
+        const active = window.location.hash === this.href ? true : false;
+        const classes = active ? 'mb-menu-item active' : 'mb-menu-item';
 
         this.shadow.innerHTML = `
              <style type="text/css">
@@ -92,9 +88,8 @@ class MbMenuItem extends HTMLElement {
                      background: #d96d00;
                  }
 
-                 ${
-        this.icon
-            ? `:host .icon:before {
+                 ${this.icon ? `
+                    :host .icon:before {
                          content: "";
                          width: 18px;
                          height: 48px;
@@ -118,18 +113,16 @@ class MbMenuItem extends HTMLElement {
                              background-size: 12px 12px;
                              margin-right: 0;
                          }
-                     }
-                     `
-            : ''}
+                     }`
+                    : ''
+                }
              </style>
 
              <li class="${classes}" role="menuitem">
                  <a href="${this.href}"
                      title="${this.title}"
                      aria-label="${this.title}"
-                     ${this.icon
-                ? `class="icon"`
-                : ''}>
+                     ${this.icon ? `class="icon"` : ''}>
                      <content></content>
                  </a>
              </li>

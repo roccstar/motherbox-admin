@@ -46,14 +46,13 @@ class MbFooter extends HTMLElement {
     render() {
         if (this.author) {
             const date = new Date().getFullYear();
-            const author = this.href
-                ? `<a href="${this.href}"
+            const author = this.href ?
+                `<a href="${this.href}"
                     title="${this.author}"
                     aria-label="${this.author}"
                     target="_blank">
                     ${this.author}
-                </a>`
-                : this.author;
+                </a>`: this.author;
 
             this.shadow.innerHTML = `
                 <style type="text/css">
